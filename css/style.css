@@ -1,0 +1,129 @@
+/* Основной контейнер, задаем общие параметры, фон */
+
+body {
+    position: relative;
+    background: url(../img/fon3.png) no-repeat center;
+    background-position: 25% 1%;
+    left: 0px;
+    animation: showright 5s 12s ease;
+    animation-fill-mode: backwards;
+}
+
+/* Обработка плавной анимации */
+@keyframes showright {
+    from {left: -100%;}
+    to {right: 50%;}
+}
+/* Задаем общие параметры шрифта и отображения, а так же фон резюме */
+.container {
+    background: url(../img/background3.png);
+    background-size: 100% 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-shadow: 2px 2px 4px  whitesmoke;
+    font-style: italic;
+    font-weight: bold;
+    text-align: justify;
+}
+
+/* Заголовок сайта */
+.header {
+    background: linear-gradient(30deg, blue, white);
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px 4px blue;
+    max-width: 100%;
+    padding: 1%;
+    margin-bottom: 2%;
+}
+/* Оформление контента в левом Flex контейнере */
+.left_content {
+    display: flex;
+    float: left;
+    margin-left: 5px;
+    max-height: 100%;
+    max-width: 30%;
+    width: 25%;
+    flex-direction: row;
+    overflow: hidden;
+    border-right: rgb(4, 106, 223) 10px ;
+    border-right-style: ridge;
+}
+/* Оформление иконок */
+.icons {
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    flex-direction: column;
+}
+/* Формируем разделительную линию между контентом */
+.rl {
+    border: 2px solid rgb(0, 44, 163);
+    border-radius: 80%;
+    width: 100%;
+}
+/* Оформление заголовка сайта */
+.he {
+    float: right;
+    text-transform: uppercase;
+    margin-right: 10%;
+    text-align: center;
+    color: rgb(4, 4, 114);
+}
+
+/* Оформление правого Flex контейнера */
+.right_content {
+    margin-right: 5px;
+    float: right;
+    width: 70%;
+    max-height: 100%;
+    overflow: hidden;
+}
+/* Поведение при наведении указателя и потери указателя */
+.hov {
+    transition: 0.1s;
+    border: solid rgb(110, 189, 253) 0px;
+}
+.hov:hover {
+    border: 2px rgb(1, 51, 189) solid;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+/* Поведение при наведении указателя на телефон или почту */
+.contact {
+    font-size: 16px;
+    transition: 0.2s;
+}
+.contact:hover {
+    font-size: 18px;
+    transition: 0.2s;
+}
+/* Оформление футера */
+.foo {
+    display: inline-block;
+    bottom: 0;
+    margin-top: 2%;
+    width: 100%;
+    height: 150px;
+    background: url(../img/footer.png);
+}
+/* Изменеие оформления страницы при разрешении экрана ниже 600px */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        display: flex;
+        margin-left: 2px;
+        margin-right: 2px;
+        border: none;
+        width: auto;
+        height: auto;
+    }
+    .left_content{
+        display: flex;
+        flex-direction: column;
+        border: none;
+        height: auto;
+        width: max-content;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
