@@ -5,14 +5,14 @@ body {
     background: url(../img/fon3.png) no-repeat center;
     background-position: 25% 1%;
     left: 0px;
-    animation: showright 5s 12s ease;
+    animation: showright 5s 8s ease;
     animation-fill-mode: backwards;
 }
 
 /* Обработка плавной анимации */
 @keyframes showright {
     from {left: -100%;}
-    to {right: 50%;}
+    to {right: 50%; rotate: 360deg;}
 }
 /* Задаем общие параметры шрифта и отображения, а так же фон резюме */
 .container {
